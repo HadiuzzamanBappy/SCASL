@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes circularLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200);
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.main-body .service-industry .title h4, .title h4, .site-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+.main-body .service-industry .business-suggestion .blocks-item .list-body .list-item p, .main-body .service-industry .business-suggestion .blocks-item span, .main-body .service-industry .industry-list .list-item span, .main-body .outsource-benifit .benifit-list .quote p, .main-body .outsource-benifit .benifit-list .list-item p, .main-body .outsource-benifit .benifit-list .list-item span, .main-body .our-commitment .commitment-list .list-item span, .main-body .primary-information .information .initial-body p, .main-body .our-goal .information .initial-body p, .main-body .primary-information .information .initial-body .list-body .list-item p span, .main-body .our-goal .information .initial-body .list-body .list-item p span, .main-body .primary-information .information .initial-body .list-body .list-item p, .main-body .our-goal .information .initial-body .list-body .list-item p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 180%;
+  letter-spacing: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+.site-title {
+  position: relative;
+  margin-bottom: -4px;
+}
+.site-title img {
+  height: 300px;
+  width: -webkit-fill-available;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), lightgray 50%/cover no-repeat;
+}
+.site-title h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FEFEFE;
+  text-align: center;
+}
+
+.footer-title h2 {
+  font-size: 30px !important;
+}
+.footer-title h2 span {
+  color: inherit !important;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+.title h4 {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.border-left {
+  border-left: 5px solid #007DFE;
+  padding-left: 30px;
+}
+
+.main-body {
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.main-body .primary-information, .main-body .our-goal {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 90px;
+  padding: 30px calc((100vw - 1240px) / 2);
+  align-items: center;
+  justify-content: space-between;
+}
+.main-body .primary-information .information, .main-body .our-goal .information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 640px;
+}
+.main-body .primary-information .information .title, .main-body .our-goal .information .title {
+  align-items: flex-start;
+}
+.main-body .primary-information .information .initial-body .list-body, .main-body .our-goal .information .initial-body .list-body {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.main-body .primary-information .information .initial-body .list-body .list-item p, .main-body .our-goal .information .initial-body .list-body .list-item p {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 180%;
+  text-align: justify;
+}
+.main-body .primary-information .information .initial-body .list-body .list-item p span, .main-body .our-goal .information .initial-body .list-body .list-item p span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.main-body .primary-information .information .initial-body p, .main-body .our-goal .information .initial-body p {
+  line-height: 180%;
+  text-align: justify;
+}
+.main-body .primary-information .hero-image img, .main-body .our-goal .hero-image img {
+  width: 400px;
+  height: auto;
+}
+.main-body .our-commitment {
+  padding: 60px 0;
+  background-color: #EDF6FF;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+.main-body .our-commitment .commitment-list {
+  padding: 0 calc((100vw - 1240px) / 2);
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+}
+.main-body .our-commitment .commitment-list .list-item {
+  position: relative;
+  border-bottom: 10px solid #007DFE;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-body .our-commitment .commitment-list .list-item span {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 30px;
+}
+.main-body .our-commitment .commitment-list .list-item img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main-body .our-commitment .commitment-list #commitment-communication {
+  height: fit-content;
+  align-self: flex-end;
+}
+.main-body .our-commitment .commitment-list #commitment-understanding {
+  height: fit-content;
+  align-self: center;
+}
+.main-body .our-commitment .commitment-list #commitment-solution {
+  margin-bottom: 160px;
+}
+.main-body .outsource-benifit {
+  padding: 30px calc((100vw - 1240px) / 2);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+}
+.main-body .outsource-benifit .benifit-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 40px;
+  position: relative;
+}
+.main-body .outsource-benifit .benifit-list .list-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #EDF6FF;
+  filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.15));
+  min-height: 320px;
+}
+.main-body .outsource-benifit .benifit-list .list-item span {
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #007DFE 1.25%, rgba(0, 125, 254, 0) 100%);
+  color: #FEFEFE;
+  font-size: 20px;
+  font-weight: 600;
+}
+.main-body .outsource-benifit .benifit-list .list-item p {
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: justify;
+}
+.main-body .outsource-benifit .benifit-list .quote {
+  background-color: unset;
+  filter: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.main-body .outsource-benifit .benifit-list .quote img {
+  width: 76px;
+}
+.main-body .outsource-benifit .benifit-list .quote p {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+.main-body .outsource-benifit .benifit-list::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  background-color: rgba(0, 125, 254, 0.15);
+  position: absolute;
+  right: -40%;
+  bottom: 0%;
+}
+.main-body .service-industry {
+  padding: 30px calc((100vw - 1240px) / 2);
+  margin-top: 60px;
+}
+.main-body .service-industry .title {
+  padding-bottom: 40px;
+  position: relative;
+}
+.main-body .service-industry .title h4 {
+  font-size: 30px;
+  z-index: 100;
+  padding: 0 40px;
+  background-color: #FEFEFE;
+}
+.main-body .service-industry .title::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #007DFE;
+  position: absolute;
+  top: 30%;
+}
+.main-body .service-industry .industry-list {
+  display: flex;
+  flex-direction: row;
+  gap: 65px;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 80px;
+}
+.main-body .service-industry .industry-list .list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-body .service-industry .industry-list .list-item img {
+  width: 370px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.2);
+}
+.main-body .service-industry .industry-list .list-item span {
+  font-size: 26px;
+  font-weight: 600;
+  color: #007DFE;
+}
+.main-body .service-industry .business-suggestion {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+.main-body .service-industry .business-suggestion .blocks-item {
+  width: -webkit-fill-available;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #EDF6FF;
+}
+.main-body .service-industry .business-suggestion .blocks-item span {
+  font-size: 22px;
+  font-weight: 600;
+}
+.main-body .service-industry .business-suggestion .blocks-item .list-body {
+  list-style-type: disclosure-closed;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  color: #007DFE;
+}
+.main-body .service-industry .business-suggestion .blocks-item .list-body .list-item p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.main-body .our-goal {
+  margin: 30px calc((100vw - 1240px) / 2);
+  padding: 60px;
+  background-color: #FEFEFE;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.main-body .our-goal .title {
+  align-items: flex-start;
+}/*# sourceMappingURL=about-us.css.map */

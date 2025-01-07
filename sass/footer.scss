@@ -1,0 +1,318 @@
+@import 'mixins/reset';
+@import 'mixins/variable';
+@import 'mixins/font';
+@import 'mixins/position';
+@import 'mixins/prefix';
+@import 'mixins/animation';
+@import 'mixins/default';
+
+.hide{
+	display: none !important;
+}
+
+.footer-title {
+	@extend %center-flex;
+	flex-direction: column;
+	align-self: stretch;
+
+	h2 {
+		@extend %text-header;
+		text-align: center;
+		text-transform: capitalize;
+		font-weight: ca;
+
+		span {
+			color: $accent-title;
+		}
+	}
+}
+
+#site-footer{
+	.our-clients {
+		@extend %center-flex;
+		flex-direction: column;
+		gap: 40px;
+		width: auto;
+		padding: 100px $page-margin;
+		padding: $section-padding-bottom-down 0 !important;
+		overflow: hidden;
+
+		.clients-body {
+			@extend %center-flex;
+			flex-direction: row;
+			padding: 48px 12px;
+			justify-content: space-between;
+			gap: 24px;
+			list-style-type: none;
+			align-self: stretch;
+			display: inline-flex;
+			white-space: nowrap;
+
+			.list-item {
+				padding-right: 10%;
+				animation: circularLoop 20s linear infinite;
+
+				img {
+					width: 104px;
+				}
+				&:first-child{
+					margin-left: 100px;
+				}
+			}
+		}
+	}
+	.contact-us{
+		background-image: url("../img/contact-us.png");
+		background-size: cover;
+		background-position: bottom right;
+		@extend %center-flex;
+		flex-direction: row;
+		gap: 16px;
+		justify-content: space-between;
+		padding: $section-padding-bottom-down $page-margin;
+		position: relative;
+		.contact-form{
+			display: flex;
+			flex-direction: column;
+			gap: 56px;
+			width: 50%;
+			.form-header{
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				span{
+					@extend %text-caption;
+				}
+				h2{
+					@extend %text-header;
+					span{
+						@extend %text-header;
+						text-transform: capitalize;
+					}
+				}
+			}
+			.form-body{
+				form{
+					display: flex;
+					flex-direction: column;
+					gap: 24px;
+					input[type=text],input[type=tel],input[type=email]{
+						padding: 12px 0;
+						border: none;
+						background: none;
+						border-bottom: 1px solid rgba($black,.25);
+						@extend %text-body;
+						font-size: $text-2;
+					}
+					input[type=submit]{
+						background-color: $accent-title;
+						color: $white;
+						width: fit-content;
+						padding: 12px 60px;
+						margin-top: 40px;
+						@extend %text-body;
+						border: none;
+						@extend %center-flex;
+						cursor: pointer;
+						transition: .2s ease-in-out;
+						&:hover{
+							opacity: 0.75;
+							transition: .2s ease-in-out;
+						}
+					}
+					input:focus{
+						outline: none;
+					}
+				}
+			}
+		}
+		img{
+			width: 450px;
+			height: 450px;
+			opacity: .5;
+		}
+	}
+	.main-footer{
+		@extend %center-flex;
+		gap: 30px;
+		padding: 80px $page-margin 0px $page-margin;
+		flex-direction: column;
+		align-items: stretch;
+		background-color: $primary-light;
+		@extend %text-button;
+		color: $primary-dark;
+		.informations{
+			@extend %center-flex;
+			gap: 64px;
+			flex-direction: column;
+			align-items: stretch;
+			.important-links{
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				flex-direction: row;
+				.company-info,.menu-links,.ao-service,.contact-info{
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					.footer-title{
+						align-items: flex-start;
+						strong{
+							@extend %text-button;
+							text-wrap: nowrap;
+							font-size: $text-4;
+							font-weight: calc($font-weight + 100);
+						}	
+					}
+					.menu{
+						display: flex;
+						flex-direction: column;
+						gap: 14px;
+						.menu-item{
+							color: rgba($color: $primary-dark, $alpha: .75);
+							a{
+								@extend %text-button;
+								text-wrap: nowrap;
+								font-size: $text-4;
+								color: rgba($color: $primary-dark, $alpha: .75);
+								transition: .2s ease-in-out;
+								&:hover{
+									color: $accent-title;
+									text-decoration: underline;
+									transition: .2s ease-in-out;
+								}
+							}
+						}
+					}
+				}
+				.company-info{
+					.details{
+						p{
+							@extend %text-button;
+							font-size: $text-4;
+							color: rgba($color: $primary-dark, $alpha: .75);
+							max-width: 200px;
+						}
+					}
+				}
+				.ao-service{
+					gap: 16px;
+					.footer-title{
+						padding-bottom: 8px;
+						border-bottom: 1px solid rgba($primary-dark,0.25);
+					}
+					.menu{
+						display: flex;
+						flex-direction: row;
+						align-items: flex-start;
+						align-self: stretch;
+						gap: 60px;
+						.service-item{
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 14px;
+							.menu-item{
+								position: relative;
+								overflow: visible;
+								.link{
+									width: 176px;
+									overflow: hidden;
+									text-overflow: ellipsis;
+								}
+								.tooltip{								
+									/* Position the tooltip */
+									position: absolute;
+									z-index: 100;
+									bottom: 0%;
+									left: 100%;
+									width: max-content;
+									background: rgba($black,.75);
+									box-shadow: 0px 2px 4px $black;
+									padding: 2px 10px;
+									visibility: hidden;
+									color: $white;
+									font-size: $text-6;
+									transition: .2s ease-in-out;
+								}
+								&:hover{
+									.tooltip{
+										visibility: visible;
+										transition: .2s ease-in-out;
+									}
+								}						
+							}
+						}
+					}
+				}
+				.contact-info{
+					.menu{
+						display: flex;
+						flex-direction: column;
+						gap: 26px;
+						.menu-item{
+							display: flex;
+							flex-direction: row;
+							align-content: center;
+							gap: 16px;
+							align-items: center;
+							transition: .2s ease-in-out;
+							i{
+								font-size: 20px;
+							}
+							a{
+								display: flex;
+								flex-direction: row;
+								gap: 8px;
+							}
+							&:hover{
+								a{
+									color: $accent-title;
+									text-decoration: underline;
+									transition: .2s ease-in-out;
+								}
+							}
+							&:last-child{
+								a,i{
+									text-decoration: none;
+								}
+								&:hover{
+									a,i{
+										color: unset;
+									}
+								}
+							}
+						}
+						
+						.social-icons{
+							display: flex;
+							flex-direction: row;
+							gap: 26px;
+							padding-left: 4px;
+							i{
+								font-size: $text-1;
+								transition: .2s ease-in-out;
+								&:hover{
+									color: $accent-title !important;
+									transition: .2s ease-in-out;
+								}
+							}
+							&:hover{
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+			.foot-note{
+				padding:16px 0;
+				border-top: 1px solid rgba($primary-dark,0.2);
+				strong{
+					@extend %text-button;
+					color: rgba($color: $primary-dark, $alpha: .75);
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

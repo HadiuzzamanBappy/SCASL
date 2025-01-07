@@ -1,0 +1,122 @@
+@import 'mixins/reset';
+@import 'mixins/variable';
+@import 'mixins/font';
+@import 'mixins/position';
+@import 'mixins/prefix';
+@import 'mixins/animation';
+@import 'mixins/default';
+
+#site-header {
+	@extend %center-flex;
+	height: 70px;
+	padding: 0px $page-margin;
+	background: $primary-light;
+    z-index: 999;
+	position: sticky;
+	top: 0;
+	.header-body {
+		@extend %center-flex;
+		justify-content: space-between;
+		align-self: stretch;
+		flex: 1 0 0;
+
+		.logo-container {
+			@extend %center-flex;
+		}
+		.main-menu {
+			@extend %center-flex;
+			height: 100%;
+
+			ul {
+				@extend %center-flex;
+				justify-content: flex-end;
+				align-self: stretch;
+				color: $white;
+
+				.main-menu-item {
+					@extend %center-flex;
+					align-self: stretch;
+					padding: 14px 20px;
+					position: relative;
+					cursor: pointer;
+					a {
+						@extend %center-flex;
+						align-self: stretch;
+						@extend %text-button;
+						transition: .2s ease-in-out;
+						i {
+							@extend %center-flex;
+							margin-left: 8px;
+						}
+					}
+					img{
+						margin-right: 8px;
+					}
+					&:hover {
+						a{
+							color: $accent-title;
+							transition: .2s ease-in-out;
+						}
+						.submenu {
+							display: block;
+						}
+					}
+					&:last-child{
+						opacity: 1;
+						a{
+							font-weight: $font-weight + 200;
+						}
+					}
+					&:last-child:hover {
+						border-bottom: unset;
+						background: unset;
+						animation: unset;
+
+						a {
+							color: $accent-title;
+						}
+					}
+
+					.submenu {
+						display: none;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						background-color: $white;
+						z-index: 10;
+						box-shadow: $box-shadow;
+						width: 340px;
+						li {
+							padding: 12px;
+							display: flex;
+							justify-content: flex-start;
+							border-bottom: 1px solid $black-20;
+							transition: .2s ease-in-out;
+							a {
+								@extend %text-button;
+								color: $black;
+							}
+							&:hover{
+								background-color: $accent-title;
+								transition: .2s ease-in-out;
+								a{
+									color: $white;
+								}
+							}
+							&:last-child{
+								border-bottom: unset;
+							}
+						}
+					}
+				}
+
+				.active {
+					font-weight: 600;
+					a{
+						color: $accent-title;
+					}
+				}
+			}
+		}
+	}
+}

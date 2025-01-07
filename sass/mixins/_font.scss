@@ -1,0 +1,10 @@
+// Font
+@mixin font($family:null, $size: null, $style: null, $weight: null, $line-height: null, $spacing: null, $color: null) {
+	font-family: $family;
+	font-size: $size;
+	font-style: $style;
+	font-weight: $weight;
+	line-height: $line-height;
+	letter-spacing: $spacing;
+	color: $color
+}

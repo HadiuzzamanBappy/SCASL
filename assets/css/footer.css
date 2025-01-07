@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes circularLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200);
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#site-footer .main-footer .informations, #site-footer .main-footer, #site-footer .contact-us .contact-form .form-body form input[type=submit], #site-footer .contact-us, #site-footer .our-clients .clients-body, #site-footer .our-clients, .footer-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#site-footer .contact-us .contact-form .form-header h2 span, #site-footer .contact-us .contact-form .form-header h2, .footer-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+#site-footer .contact-us .contact-form .form-body form input[type=submit], #site-footer .contact-us .contact-form .form-body form input[type=text], #site-footer .contact-us .contact-form .form-body form input[type=tel], #site-footer .contact-us .contact-form .form-body form input[type=email] {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 180%;
+  letter-spacing: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+#site-footer .main-footer .informations .foot-note strong, #site-footer .main-footer .informations .important-links .company-info .details p, #site-footer .main-footer .informations .important-links .company-info .menu .menu-item a, #site-footer .main-footer .informations .important-links .menu-links .menu .menu-item a, #site-footer .main-footer .informations .important-links .ao-service .menu .menu-item a, #site-footer .main-footer .informations .important-links .contact-info .menu .menu-item a, #site-footer .main-footer .informations .important-links .company-info .footer-title strong, #site-footer .main-footer .informations .important-links .menu-links .footer-title strong, #site-footer .main-footer .informations .important-links .ao-service .footer-title strong, #site-footer .main-footer .informations .important-links .contact-info .footer-title strong, #site-footer .main-footer {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+#site-footer .contact-us .contact-form .form-header span {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.14rem;
+  color: #212121;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hide {
+  display: none !important;
+}
+
+.footer-title {
+  flex-direction: column;
+  align-self: stretch;
+}
+.footer-title h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: ca;
+}
+.footer-title h2 span {
+  color: #007DFE;
+}
+
+#site-footer .our-clients {
+  flex-direction: column;
+  gap: 40px;
+  width: auto;
+  padding: 100px calc((100vw - 1240px) / 2);
+  padding: 100px 0 !important;
+  overflow: hidden;
+}
+#site-footer .our-clients .clients-body {
+  flex-direction: row;
+  padding: 48px 12px;
+  justify-content: space-between;
+  gap: 24px;
+  list-style-type: none;
+  align-self: stretch;
+  display: inline-flex;
+  white-space: nowrap;
+}
+#site-footer .our-clients .clients-body .list-item {
+  padding-right: 10%;
+  animation: circularLoop 20s linear infinite;
+}
+#site-footer .our-clients .clients-body .list-item img {
+  width: 104px;
+}
+#site-footer .our-clients .clients-body .list-item:first-child {
+  margin-left: 100px;
+}
+#site-footer .contact-us {
+  background-image: url("../img/contact-us.png");
+  background-size: cover;
+  background-position: bottom right;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 100px calc((100vw - 1240px) / 2);
+  position: relative;
+}
+#site-footer .contact-us .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: 50%;
+}
+#site-footer .contact-us .contact-form .form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#site-footer .contact-us .contact-form .form-header h2 span {
+  text-transform: capitalize;
+}
+#site-footer .contact-us .contact-form .form-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#site-footer .contact-us .contact-form .form-body form input[type=text], #site-footer .contact-us .contact-form .form-body form input[type=tel], #site-footer .contact-us .contact-form .form-body form input[type=email] {
+  padding: 12px 0;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.25);
+  font-size: 18px;
+}
+#site-footer .contact-us .contact-form .form-body form input[type=submit] {
+  background-color: #007DFE;
+  color: #FEFEFE;
+  width: fit-content;
+  padding: 12px 60px;
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .contact-us .contact-form .form-body form input[type=submit]:hover {
+  opacity: 0.75;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .contact-us .contact-form .form-body form input:focus {
+  outline: none;
+}
+#site-footer .contact-us img {
+  width: 450px;
+  height: 450px;
+  opacity: 0.5;
+}
+#site-footer .main-footer {
+  gap: 30px;
+  padding: 80px calc((100vw - 1240px) / 2) 0px calc((100vw - 1240px) / 2);
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #EDF6FF;
+  color: #062E4B;
+}
+#site-footer .main-footer .informations {
+  gap: 64px;
+  flex-direction: column;
+  align-items: stretch;
+}
+#site-footer .main-footer .informations .important-links {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#site-footer .main-footer .informations .important-links .company-info, #site-footer .main-footer .informations .important-links .menu-links, #site-footer .main-footer .informations .important-links .ao-service, #site-footer .main-footer .informations .important-links .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#site-footer .main-footer .informations .important-links .company-info .footer-title, #site-footer .main-footer .informations .important-links .menu-links .footer-title, #site-footer .main-footer .informations .important-links .ao-service .footer-title, #site-footer .main-footer .informations .important-links .contact-info .footer-title {
+  align-items: flex-start;
+}
+#site-footer .main-footer .informations .important-links .company-info .footer-title strong, #site-footer .main-footer .informations .important-links .menu-links .footer-title strong, #site-footer .main-footer .informations .important-links .ao-service .footer-title strong, #site-footer .main-footer .informations .important-links .contact-info .footer-title strong {
+  text-wrap: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+}
+#site-footer .main-footer .informations .important-links .company-info .menu, #site-footer .main-footer .informations .important-links .menu-links .menu, #site-footer .main-footer .informations .important-links .ao-service .menu, #site-footer .main-footer .informations .important-links .contact-info .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#site-footer .main-footer .informations .important-links .company-info .menu .menu-item, #site-footer .main-footer .informations .important-links .menu-links .menu .menu-item, #site-footer .main-footer .informations .important-links .ao-service .menu .menu-item, #site-footer .main-footer .informations .important-links .contact-info .menu .menu-item {
+  color: rgba(6, 46, 75, 0.75);
+}
+#site-footer .main-footer .informations .important-links .company-info .menu .menu-item a, #site-footer .main-footer .informations .important-links .menu-links .menu .menu-item a, #site-footer .main-footer .informations .important-links .ao-service .menu .menu-item a, #site-footer .main-footer .informations .important-links .contact-info .menu .menu-item a {
+  text-wrap: nowrap;
+  font-size: 14px;
+  color: rgba(6, 46, 75, 0.75);
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .company-info .menu .menu-item a:hover, #site-footer .main-footer .informations .important-links .menu-links .menu .menu-item a:hover, #site-footer .main-footer .informations .important-links .ao-service .menu .menu-item a:hover, #site-footer .main-footer .informations .important-links .contact-info .menu .menu-item a:hover {
+  color: #007DFE;
+  text-decoration: underline;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .company-info .details p {
+  font-size: 14px;
+  color: rgba(6, 46, 75, 0.75);
+  max-width: 200px;
+}
+#site-footer .main-footer .informations .important-links .ao-service {
+  gap: 16px;
+}
+#site-footer .main-footer .informations .important-links .ao-service .footer-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(6, 46, 75, 0.25);
+}
+#site-footer .main-footer .informations .important-links .ao-service .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 60px;
+}
+#site-footer .main-footer .informations .important-links .ao-service .menu .service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+#site-footer .main-footer .informations .important-links .ao-service .menu .service-item .menu-item {
+  position: relative;
+  overflow: visible;
+}
+#site-footer .main-footer .informations .important-links .ao-service .menu .service-item .menu-item .link {
+  width: 176px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#site-footer .main-footer .informations .important-links .ao-service .menu .service-item .menu-item .tooltip {
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+  bottom: 0%;
+  left: 100%;
+  width: max-content;
+  background: rgba(33, 33, 33, 0.75);
+  box-shadow: 0px 2px 4px #212121;
+  padding: 2px 10px;
+  visibility: hidden;
+  color: #FEFEFE;
+  font-size: 10px;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .ao-service .menu .service-item .menu-item:hover .tooltip {
+  visibility: visible;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .menu-item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 16px;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .menu-item i {
+  font-size: 20px;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .menu-item a {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .menu-item:hover a {
+  color: #007DFE;
+  text-decoration: underline;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .menu-item:last-child a, #site-footer .main-footer .informations .important-links .contact-info .menu .menu-item:last-child i {
+  text-decoration: none;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .menu-item:last-child:hover a, #site-footer .main-footer .informations .important-links .contact-info .menu .menu-item:last-child:hover i {
+  color: unset;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  padding-left: 4px;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .social-icons i {
+  font-size: 20px;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .social-icons i:hover {
+  color: #007DFE !important;
+  transition: 0.2s ease-in-out;
+}
+#site-footer .main-footer .informations .important-links .contact-info .menu .social-icons:hover {
+  opacity: 1;
+}
+#site-footer .main-footer .informations .foot-note {
+  padding: 16px 0;
+  border-top: 1px solid rgba(6, 46, 75, 0.2);
+}
+#site-footer .main-footer .informations .foot-note strong {
+  color: rgba(6, 46, 75, 0.75);
+  font-size: 12px;
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,319 @@
+@import 'mixins/reset';
+@import 'mixins/variable';
+@import 'mixins/font';
+@import 'mixins/position';
+@import 'mixins/prefix';
+@import 'mixins/animation';
+@import 'mixins/default';
+
+
+.site-title{
+    position: relative;
+    margin-bottom: -4px;
+    img{
+        height: 300px;
+        width: -webkit-fill-available;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), lightgray 50% / cover no-repeat;
+    }
+    h2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $white;
+        text-align: center;
+        @extend %text-header;
+    }
+}
+
+.footer-title {
+
+	h2 {
+        font-size: $header-2 !important;
+
+		span {
+			color: inherit !important;
+		}
+	}
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    h4{
+        @extend %text-header;
+        text-transform: capitalize;
+        font-size: $header-2;
+        font-weight: $font-weight + 200;
+    }
+}
+
+.border-left{
+    border-left: 5px solid $accent-title;
+    padding-left: 30px;
+}
+
+.main-body{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px;
+    position: relative;
+    overflow: hidden;
+    .primary-information,.our-goal{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 90px;
+        padding: 30px $page-margin;
+        align-items: center;
+        justify-content: space-between;
+        .information{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 640px;
+            .title{
+                align-items: flex-start;
+            }
+            .initial-body{
+                .list-body{
+                    display: flex;
+                    flex-direction: column;
+                    list-style-type: none;
+                    gap: 20px;
+                    padding-bottom: 40px;
+                    .list-item{
+                        p{
+                            @extend %text-body;
+                            font-size: $text-3;
+                            text-align: justify;
+                            line-height: $line-height-body;
+                            text-align: justify;
+                            span{
+                                @extend %text-body;
+                                font-size: $text-3;
+                                font-weight: $font-weight + 200;
+                            }
+                        }
+                    }
+                }
+                p{
+                    @extend %text-body;
+                    line-height: $line-height-body;
+                    text-align: justify;
+                }
+            }
+        }
+        .hero-image{
+            img{
+                width: 400px;
+                height: auto;
+            }
+        }
+    }
+    .our-commitment{
+        padding: 60px 0;
+        background-color: $primary-light;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        .commitment-list{
+            padding: 0 $page-margin;
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            justify-content: center;
+            .list-item{
+                position: relative;
+                border-bottom: 10px solid $accent-title;
+                width: 220px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                span{
+                    @extend %text-body;
+                    font-size: $text-1;
+                    font-weight: $font-weight + 100;
+                    text-align: center;
+                    padding: 20px 30px;
+                }
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            #commitment-communication{
+                height: fit-content;
+                align-self: flex-end;
+            }
+            #commitment-understanding{
+                height: fit-content;
+                align-self: center;
+            }
+            #commitment-solution{
+                margin-bottom: 160px;
+            }
+        }
+    }
+    .outsource-benifit{
+        padding: 30px $page-margin;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+        .benifit-list{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 40px;
+            position: relative;
+            .list-item{
+                display: flex;
+                flex-direction: column;
+                background-color: $primary-light;
+                filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.15));
+                min-height: 320px;
+                span{
+                    padding: 12px 30px;
+                    background: linear-gradient(90deg, $accent-title 1.25%, rgba(0, 125, 254, 0.00) 100%);
+                    color: $white;
+                    @extend %text-body;
+                    font-size: $text-1;
+                    font-weight: $font-weight + 200;
+                }
+                p{
+                    padding: 30px;
+                    @extend %text-body;
+                    font-size: $text-1;
+                    font-weight: $font-weight - 100;
+                    text-align: justify;
+                }
+            }
+            .quote{
+                background-color: unset;
+                filter: unset;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                img{
+                    width: 76px;
+                }
+                p{
+                    @extend %text-body;
+                    font-size: $sub-header;
+                    font-weight: $font-weight + 200;
+                    text-align: center;
+                }
+            }
+            &::after{
+                content: "";
+                width: 400px;
+                height: 400px;
+                border-radius: 100%;
+                background-color: rgba($color: $accent-title, $alpha: 0.15);
+                position: absolute;
+                right: -40%;
+                bottom: 0%;
+            }
+        }
+    }
+    .service-industry{
+        padding: 30px $page-margin;
+        margin-top: 60px;
+        .title{
+            padding-bottom: 40px;
+            position: relative;
+            h4{
+                @extend %text-header;
+                font-size: $header-2;
+                z-index: 100;
+                padding: 0 40px;
+                background-color: $white;
+            }
+            &::before{
+                content: "";
+                width: 100%;
+                height: 3px;
+                background-color: $accent-title;
+                position: absolute;
+                top: 30%;
+            }
+        }
+        .industry-list{
+            display: flex;
+            flex-direction: row;
+            gap: 65px;
+            align-items: flex-start;
+            justify-content: space-between;
+            text-align: center;
+            padding-bottom: 80px;
+            .list-item{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                img{
+                    width: 370px;
+                    box-shadow: 2px 2px 7px 0px $black-20;
+                }
+                span{
+                    @extend %text-body;
+                    font-size: $sub-header;
+                    font-weight: $font-weight + 200;
+                    color: $accent-title;
+                }
+            }
+        }
+        .business-suggestion{
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            .blocks-item{
+                width: -webkit-fill-available;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                background-color: $primary-light;
+                span{
+                    @extend %text-body;
+                    font-size: $sub-header-2;
+                    font-weight: $font-weight + 200;
+                }
+                .list-body{
+                    list-style-type: disclosure-closed;
+                    padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: flex-start;
+                    color: $accent-title;
+                    .list-item{
+                        p{
+                            @extend %text-body;
+                            font-size: $text-1;
+                            font-weight: $font-weight - 100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .our-goal{
+        margin: 30px $page-margin;
+        padding: 60px;
+        background-color: $white;
+        box-shadow: 0px 5px 20px 0px $black-20;
+        .title{
+            align-items: flex-start;
+        }
+    }
+}

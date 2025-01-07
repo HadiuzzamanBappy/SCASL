@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Media
+$iphone: "(min-width: 320px)";
+$extraSmall: "(min-width: 480px)";
+$minSmall: "(min-width: 768px)";
+$minMedium: "(min-width: 992px)";
+$minLarge: "(min-width: 1200px)";
+
+// Color
+$primary: #0047B1;
+$primary-dark: #062E4B;
+$primary-light: #EDF6FF;
+$primary-light-chart: #C2DBFF;
+
+$secondary: #001D38;
+$secondary-light: #002445;
+
+$accent: #FFC766;
+$accent-title: #007DFE;
+$accent-light: #FAF5EE;
+$accent-dark: #CB9E00;
+$accent-secondary: #00927D;
+$accent-secondary-light: #00BFB4;
+
+$info:#FFE4E4;
+
+$black: #212121;
+$black-20: rgba(#000000, 0.20);
+$white: #FEFEFE;
+$grey: #080808;
+$gradient: #ECF7FF;
+
+// Fonts
+$text-font: 'Poppins', sans-serif;
+$heading-font: 'Playfair Display', serif;
+
+$font-weight: 400;
+
+$header-1: 40px;
+$header-2: 30px;
+$header-3: 20px;
+
+$sub-header:26px;
+$sub-header-2:22px;
+
+$text-1: 20px;
+$text-2: 18px;
+$text-3: 16px;
+$text-4: 14px;
+$text-5: 12px;
+$text-6: 10px;
+$text-7: 8px;
+
+// Default
+$line-height: 150%;
+$line-height-body: 180%;
+$animation-duration: .1s;
+$page-margin: calc((100vw - #{1240px}) / 2);
+$section-padding-bottom-down: 100px;
+
+
+// Shadow
+$box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+//margin-padding
+$nudges: 10px;
