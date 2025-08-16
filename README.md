@@ -1,12 +1,20 @@
 
 # SCASL - Frontend Development Project
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ## Overview
+
 SCASL is a professional services frontend project built with HTML, CSS, JavaScript, and SASS. It provides a user-friendly interface with features such as clean navigation, modular components, and a responsive design. The project includes multiple pages with a consistent theme to enhance the user experience.
+
+▶️ **[View the Live Vercel](https://scasl.vercel.app/)**  
+
+![Preview](/assets/img/demo.png)
 
 ---
 
 ## Features
+
 1. **Responsive Design**:
    - Adapts to different screen sizes for optimal viewing on desktops, tablets, and mobile devices.
 
@@ -45,6 +53,7 @@ SCASL/
 ## Installation
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/your-username/SCASL.git
    cd SCASL
